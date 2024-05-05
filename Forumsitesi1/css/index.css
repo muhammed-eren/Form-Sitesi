@@ -1,0 +1,212 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+.output {
+  width: 100%;
+  padding: 10px 50px;
+  margin: 0px;
+  border-radius: 5px;
+  transition: 0.4s;
+  position: fixed;
+  top: 0;
+  left: 0;
+  color: white;
+  z-index: 2;
+}
+
+.output.succsess {
+  background-color: #d1e7dd;
+  border: 1px solid #c0e9d6;
+}
+
+.output.danger {
+  color: black;
+  background-color: #ffb8bd;
+  border: 1px solid #ff929d;
+}
+
+.panel {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 75%;
+  border: 1px solid #d1e7dd;
+  padding: 30px;
+  max-width: 400px;
+}
+
+.panel a {
+  text-decoration: none;
+  color: rgb(145, 94, 0);
+  transition: 0.3s;
+}
+
+.panel p {
+  width: 280px;
+  text-align: center;
+  font-size: 13px;
+  margin: auto;
+  margin-top: 20px;
+}
+
+.panel a:hover {
+  text-decoration: dashed;
+}
+
+.panel .form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 25px;
+  margin-top: 50px;
+}
+
+.panel form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+
+.giris-secenekleri {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.menu-gecis {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: -30px;
+  width: 20%;
+  width: 75%;
+  max-width: 430px;
+}
+
+.menu-gecis button.active {
+  border-bottom: 1px solid black;
+}
+
+.menu-gecis button {
+  width: 40%;
+  border: none;
+  padding: 10px;
+  transition: 0.5s;
+}
+
+.menuler {
+  transform: scale(0);
+  transition: 0.3s;
+  position: absolute;
+}
+
+.menuler.active {
+  transform: scale(1);
+  position: relative;
+}
+
+.container-flud {
+  display: flex;
+  background-color: #f1f1f1;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.Container {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  position: relative;
+  color: white;
+}
+
+.Container .label {
+  font-size: 15px;
+  color: #000;
+  padding-left: 10px;
+  position: absolute;
+  top: 13px;
+  transition: 0.3s;
+  display: flex;
+  justify-content: space-between;
+  pointer-events: none;
+}
+
+.input {
+  width: 100%;
+  height: 45px;
+  border: none;
+  outline: none;
+  padding: 0px 7px;
+  border-radius: 6px;
+  color: #000;
+  font-size: 15px;
+  background-color: transparent;
+  transition: 0.3s;
+  box-shadow: 6px 6px 12px #c5c5c5, -6px -6px 12px #ffffff;
+}
+
+.input:focus {
+  border: 2px solid transparent;
+  color: #000;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 1),
+    -1px -1px 6px rgba(255, 255, 255, 0.4), inset 3px 3px 10px rgba(0, 0, 0, 1),
+    inset -1px -1px 6px rgba(255, 255, 255, 0.4);
+}
+
+.Container .input:valid~.label,
+.Container .input:focus~.label {
+  transition: 0.3s;
+  padding-left: 2px;
+  transform: translateY(-35px);
+}
+
+.Container .input:valid,
+.Container .input:focus {
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 1),
+    -1px -1px 6px rgba(255, 255, 255, 0.4), inset 3px 3px 10px rgba(0, 0, 0, 1),
+    inset -1px -1px 6px rgba(255, 255, 255, 0.4);
+}
+
+.button {
+  color: #090909;
+  padding: 0.7em 1.5em;
+  /* font-size: 18px; */
+  border-radius: 0.5em;
+  background: #e8e8e8;
+  cursor: pointer;
+  border: 1px solid #e8e8e8;
+  transition: all 0.3s;
+  box-shadow: 6px 6px 12px #c5c5c5, -6px -6px 12px #ffffff;
+}
+
+.button:active {
+  transform: scale(0.9);
+}
+
+.button:hover {
+  box-shadow: inset 8px 8px 12px #c5c5c5, inset -8px -8px 12px #ffffff;
+}
+
+button i {
+  margin-right: 10px;
+}
+
+@media (max-width: 450px) {
+  .button i {
+    display: none;
+  }
+
+  .button {
+    padding: 0.5em 1.3em;
+  }
+}

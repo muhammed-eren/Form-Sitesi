@@ -1,0 +1,25 @@
+.pcard2 {
+  border-radius: 15px;
+  background: #ffffff9a;
+  max-width: 500px;
+  gap: 1rem;
+  margin-bottom: 3rem;
+}
+header {
+  width: 100%;
+  height: 75px;
+  background-color: #141511;
+  margin: auto;
+}
+@media (max-width: 768px) {
+  .res {
+    display: flex;
+    flex-direction: column;
+  }
+  .pcard2 {
+    max-width: 100%;
+    text-align: start;
+    gap: 0 !important;
+    margin-bottom: 0px;
+  }
+}
